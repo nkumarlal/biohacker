@@ -4,6 +4,11 @@ import Disease from "./Disease";
 import DrugEvents from "./DrugEvents";
 import Endpoints from "./Endpoints";
 import DrugResults from "./DrugResults";
+import nav01 from "../images/nav01.JPG"
+import nav02 from "../images/nav02.JPG"
+import nav03 from "../images/nav03.JPG"
+import nav04 from "../images/nav04.JPG"
+import nav05 from "../images/nav05.JPG"
 
 class Main extends React.Component {
  
@@ -46,8 +51,22 @@ class Main extends React.Component {
     render() {
         console.log(this.state.step);
         return (
-            <div style={{float:"left"}}>
-                <h1>Drugs matching</h1>
+            <div style={{float:"left", paddingLeft:50, paddingRight:50, paddingTop: 20}}>
+                
+                {/* <h1>Drug Efficacy Tool</h1> */}
+                {(() => {
+                    if (this.state.step === 1) {
+                        return <img src={nav01}></img>
+                    } else if (this.state.step === 2) {
+                        return <img src={nav02}></img>
+                    } else if (this.state.step === 3) {
+                        return <img src={nav03}></img>
+                    } else if (this.state.step === 4) {
+                        return <img src={nav04}></img>
+                    } else {
+                        return <img src={nav05}></img>
+                    }
+                })()}
                 <div className="row">
                     <div className="col-md-12">
                         {(() => {

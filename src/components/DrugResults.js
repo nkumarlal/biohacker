@@ -43,15 +43,18 @@ class DrugResults extends React.Component {
                                 'Patients Achieved EASI-75 Response at Week 16', 
                                 'Placebo (ADvocate 2)', '18%', 'Lebrikizumab (ADvocate 2)', '51%', '33%'],
                         ]}
-                        columns={['Trials', 'Endpoint', 'Placebo', 'P', 'Treatment', 'T', 'Relative']}
+                        columns={['Trials', 'Endpoint', 'Placebo', ' ', 'Treatment', '  ', 'Relative']}
                         search={true}
                         pagination={{
                             limit: 3,
                         }}
                         />
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-4">
                     <BarChart chartData={chartData} />
+                </div>
+                <div className="col-md-1">
+                    
                 </div>
             </div>
             <br/>
